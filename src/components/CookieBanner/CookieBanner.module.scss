@@ -1,28 +1,38 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+
 .cookie_banner {
+    @extend %noMarPad;
     width: 100%;
     color: black;
     background-color: white;
-    height: 10vh;
+    height: 15vh;
     position: fixed;
     bottom: 0;
     left: 0;
     display: grid;
     grid-template-columns: 7fr 1fr;
     z-index: 99999;
+    border-top: 1px solid black;
+
 
     section {
-        border-top: 1px solid black;
         display: flex;
-        gap: 1vw;
-        padding: 0 4rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0 1rem;
 
         p {
-            padding-left: 1vw;
+            @extend %noMarPad;
+            font-size: 0.8rem;
+
         }
 
         button {
-            margin-top: 1rem;
-            width: 80px;
+            width: 70px;
             height: 30px;
             text-align: center;
             background-color: white;
@@ -39,7 +49,8 @@
                 background-color: white;
                 border: solid 1px #00000077;
                 color: #00000077;
-                &:hover{
+
+                &:hover {
                     background-color: #efefef;
                     border: none;
                 }
@@ -50,4 +61,8 @@
             }
         }
     }
+
+    @media (min-width: 700px) {}
+
+    @media (min-width: 1000px) {}
 }

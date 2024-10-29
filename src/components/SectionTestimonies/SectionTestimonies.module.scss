@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.testimoniesStyling{
+    @include mixin.gridable(2, 1fr, 1rem);
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.shopStyling{
+
+    h2{
+        font-size: 4rem;
+    }
+    
+    button{
+        width: 12rem;
+        height: 3rem;
+        align-self: center;
+        background-color: $primary;
+        border-radius: 5px;
+        border: none;
+        a{
+            @extend %inika;
+            text-decoration: none;
+            color: #fff;
+        }
+
+    }
+}

@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.articleStyling{
+    @include mixin.flexing(column, 0);
+    justify-content: center;
+    align-items: center;
+
+    h3{
+        @extend %inika;
+        margin: 1rem;
+    }
+    p{
+        text-align: center;
+    }
+}

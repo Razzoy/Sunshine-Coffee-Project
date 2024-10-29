@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.aboutStyling{
+    @include mixin.flexing(column, 1rem);
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: 3rem !important;
+    }
+}

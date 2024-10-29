@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.wrapperStyle{
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+}

@@ -14,7 +14,6 @@ export function MainLayout() {
                 <Outlet />
             </main>
             <Footer/>
-
             <CookieBanner/>
         </>
     )

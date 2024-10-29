@@ -1,0 +1,21 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.footerStyling {
+    background-color: $primary;
+    @include mixin.gridable(3, 1fr, 0.5rem);
+    padding: 1rem;
+    justify-content: center;
+
+    ul {
+        @extend %noMarPad;
+        list-style: none;
+        li, h4 {
+            @extend %inika;
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+    }
+}

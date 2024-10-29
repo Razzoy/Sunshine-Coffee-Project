@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.cardStyling{
+    @include mixin.flexing(column, 0);
+    h2, p{
+        text-align: center;
+    }
+
+    h2{
+        @extend %licorice;
+        margin: 1rem 0;
+        font-size: 5rem
+    }
+    p{
+        @extend %inika;
+
+    }
+    img{
+        display: block;
+        width: 100%;
+    }
+
+}
