@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Licorice&display=swap');
+
+
+%inika {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+%licorice {
+    font-family: "Licorice", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+%noMarPad {
+    margin: 0;
+    padding: 0;
+}
+
+%flexAbsoluteCenter {
+    justify-content: center;
+    align-items: center;
+}

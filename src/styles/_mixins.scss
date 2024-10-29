@@ -1,0 +1,11 @@
+@mixin flexing($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin gridable($column, $fraction, $gap) {
+    display: grid;
+    grid-template-columns: repeat($column, $fraction);
+    gap: $gap;
+}

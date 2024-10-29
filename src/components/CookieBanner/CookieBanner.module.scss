@@ -1,0 +1,53 @@
+.cookie_banner {
+    width: 100%;
+    color: black;
+    background-color: white;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    z-index: 99999;
+
+    section {
+        border-top: 1px solid black;
+        display: flex;
+        gap: 1vw;
+        padding: 0 4rem;
+
+        p {
+            padding-left: 1vw;
+        }
+
+        button {
+            margin-top: 1rem;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            background-color: white;
+            border: solid 1px black;
+
+            &:hover {
+                border: none;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+
+            &:nth-of-type(1) {
+                background-color: white;
+                border: solid 1px #00000077;
+                color: #00000077;
+                &:hover{
+                    background-color: #efefef;
+                    border: none;
+                }
+            }
+
+            &:nth-of-type(2) {
+                background-color: #5ce15c;
+            }
+        }
+    }
+}

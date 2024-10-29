@@ -1,0 +1,15 @@
+@use './styles/variables' as *;
+@use './styles/placeholders' as *;
+
+body {
+    @extend %noMarPad;
+    @extend %inika;
+    background-color: $page;
+    color: #000;
+
+    h1,
+    h2,
+    h3 {
+        @extend %licorice;
+    }
+}
