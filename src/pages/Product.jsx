@@ -1,8 +1,11 @@
+import { PageDivider } from '../components/PageDivider/PageDivider'
+import { SectionTestimonies } from "../components/SectionTestimonies/SectionTestimonies"
+
 export function Product() {
-    return (
-      <section>
-          <h1>Product</h1>
-      </section>
-    )
-  }
-  
+  return (
+    <div>
+      <PageDivider />
+      <SectionTestimonies />
+    </div>
+  )
+}

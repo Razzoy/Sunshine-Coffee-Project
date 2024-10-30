@@ -10,17 +10,16 @@
     background-color: $secondary;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 
     ul {
         @extend %noMarPad;
         margin: 0.6rem 0;
         display: flex;
         list-style-type: none;
-        text-align: center;
-        gap: 2rem;
+        gap: 1rem;
         color: #fff;
 
         li {
@@ -36,6 +35,19 @@
 
         }
     }
+
+    ul:first-of-type {
+        padding: 0.3rem 1rem;
+        border: 1px solid #fff;
+        border-radius: 0.3rem;
+        justify-content: center;
+        @extend %inter;
+        font-size: 0.8rem;
+    }
+}
+
+.navIcon {
+    width: 30px;
 }
 
 .coffeeIcon {
@@ -55,6 +67,7 @@
         align-items: center;
         text-decoration: none;
         color: #fff;
+
         h2 {
             margin-top: 1rem;
             @extend %noMarPad;

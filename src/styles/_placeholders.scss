@@ -1,5 +1,7 @@
+//inika og licorice
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Licorice&display=swap');
-
+//inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 %inika {
     font-family: "Inika", serif;
@@ -12,6 +14,12 @@
     font-weight: 400;
     font-style: normal;
   }
+
+%inter{
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
 %noMarPad {
     margin: 0;

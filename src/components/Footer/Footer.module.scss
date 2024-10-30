@@ -4,9 +4,9 @@
 
 .footerStyling {
     background-color: $primary;
-    @include mixin.gridable(3, 1fr, 0.5rem);
+    @include mixin.flexing(row, 0);
     padding: 1rem;
-    justify-content: center;
+    justify-content: space-evenly;
 
     ul {
         @extend %noMarPad;

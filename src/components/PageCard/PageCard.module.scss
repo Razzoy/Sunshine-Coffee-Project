@@ -15,11 +15,65 @@
     }
     p{
         @extend %inika;
-
     }
     img{
         display: block;
         width: 100%;
     }
 
+}
+
+.productsCard{
+    @extend .cardStyling;
+    background-color: $cards;
+    padding: 1rem 2rem;
+
+    h2{
+        font-size: 4rem;
+        margin: 0;
+    }
+    h4{
+        font-weight: 400;
+        margin: 0.5rem 0;
+    }
+
+    img{
+        height: 250px;
+        object-fit: cover
+    }
+
+    button{
+        background-color: transparent;
+        border: 1px solid $secondary;
+        border-radius: 0.2rem;
+        padding: 1rem 0;
+        @extend %inika;
+        font-size: 1rem;
+    }
+}
+
+.roastContainer{
+    @include mixin.flexing(row, 0.3rem);
+    align-items: center;
+    margin-top: 0.5rem;
+
+    p{
+        margin-right: 1rem;
+        margin: 0;
+
+    }
+}
+
+.circle{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+
+.filled{
+    background-color: $coffeeLight;
+}
+
+.empty{
+    background-color: $secondary;
 }
