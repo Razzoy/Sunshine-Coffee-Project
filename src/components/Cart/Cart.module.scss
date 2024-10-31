@@ -1,0 +1,70 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+@use '../../styles/mixins' as mixin;
+
+.cartContainer{
+    padding: 0 1rem;
+}
+
+.productInfo{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    h4, p{
+        @extend %noMarPad;
+    }
+    h4{
+        min-width: 20%;
+        font-weight: 400;
+    }
+    p{
+        min-width: 1.2rem;
+        text-align: center;
+    }
+    button{
+        max-width: 1.5rem;
+        margin: auto;
+    }
+}
+
+.divider{
+    display: block;
+    border: 1px solid $secondary;
+    width: 80%;
+    margin: 1rem;
+}
+
+.emptyCart{
+    margin: auto !important;
+}
+
+.productCheck{
+    margin: 2rem 0 !important;
+    @extend .flexField;
+    flex-direction: column !important;
+    button{
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.flexField{
+    @include mixin.flexing(row, 2rem);
+    justify-content: space-between;
+    align-items: center;
+    p{
+        margin: 0.5rem 0;
+    }
+    button{
+        background-color: $primary;
+        border: none;
+        color: #fff;
+        padding: 0.5rem ;
+    }
+}
+
+.checkout{
+    margin-top: 5rem;
+}

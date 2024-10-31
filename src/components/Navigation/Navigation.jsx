@@ -22,10 +22,9 @@ export function Navigation() {
     <div className={style.navBarContainer}>
       <nav className={style.navbarStyle}>
         <ul>
-          <li>Dansk</li>
+          <li>English</li>
         </ul>
         <ul>
-
           <li>
             <img className={style.navIcon} onClick={openCart} src={cart} alt="cart" />
           </li>

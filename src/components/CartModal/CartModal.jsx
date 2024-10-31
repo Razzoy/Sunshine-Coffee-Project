@@ -1,5 +1,6 @@
 import style from './CartModal.module.scss';
 import close from '../../assets/close.png';
+import { Cart } from '../Cart/Cart'
 
 export function CartModal({isOpen, onClose}) {
   return (
@@ -9,6 +10,7 @@ export function CartModal({isOpen, onClose}) {
                 <img onClick={onClose} src={close} alt="close" />
             </span>
             <h2>Shopping Cart</h2>
+            <Cart onClose={onClose}/>
         </div>
     </div>
   )
