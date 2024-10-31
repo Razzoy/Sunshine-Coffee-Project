@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 
-export function Cart({onClose}) {
+export function Cart({ onClose }) {
 
   const { cartData, clearCart, subtractFromCart, addToCart } = useContext(CartContext);
   const subtotal = cartData.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -29,9 +29,11 @@ export function Cart({onClose}) {
                   <div key={item.id}>
                     <div className={style.productInfo}>
                       <h4>{item.name}</h4>
-                      <button onClick={() => subtractFromCart(item)}>-</button>
-                      <p>{item.quantity}</p>
-                      <button onClick={() => addToCart(item)}>+</button>
+                      <div className={style.quantityCount}>
+                        <button onClick={() => subtractFromCart(item)}>-</button>
+                        <p>{item.quantity}</p>
+                        <button onClick={() => addToCart(item)}>+</button>
+                      </div>
                       <p>{item.price * item.quantity}<br></br> DKK</p>
                     </div>
                     <span className={style.divider}></span>
@@ -39,8 +41,9 @@ export function Cart({onClose}) {
                 )
               })}
 
-              <button className={style.emptyCart} onClick={() => clearCart()}>Empty Cart</button>
-
+              <div className={style.clearButton}>
+                <button onClick={() => clearCart()}>Empty Cart</button>
+              </div>
               <div className={style.flexField}>
                 <p>Tax (25%)</p>
                 <p>{tax} DKK</p>
@@ -53,12 +56,12 @@ export function Cart({onClose}) {
 
               <div className={`${style.flexField} ${style.checkout}`}>
                 <p>Items in cart: {totalQuantity}</p>
-                <button>Go to checkout</button>
+                <button onClick={onClose}><Link to={'/checkout'}>Go to checkout</Link></button>
               </div>
 
             </div>
           </>
-      }</div>
+        }</div>
 
     </>
   )

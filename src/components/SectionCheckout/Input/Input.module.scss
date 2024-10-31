@@ -1,0 +1,7 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/placeholders' as *;
+@use '../../../styles/mixins' as mixin;
+
+.formGroup{
+    @include mixin.flexing(column, 0.5rem);
+}

@@ -2,69 +2,129 @@
 @use '../../styles/placeholders' as *;
 @use '../../styles/mixins' as mixin;
 
-.cartContainer{
+.cartContainer {
     padding: 0 1rem;
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    button:active {
+        background-color: $secondary !important;
+        color: white !important;
+        transform: scale(0.95);
+    }
 }
 
-.productInfo{
+.productInfo {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 4fr 5fr 1fr;
     align-items: center;
-    h4, p{
+
+    h4,
+    p {
         @extend %noMarPad;
     }
-    h4{
+
+    h4 {
         min-width: 20%;
         font-weight: 400;
     }
-    p{
-        min-width: 1.2rem;
+
+    p {
         text-align: center;
     }
-    button{
-        max-width: 1.5rem;
+
+}
+
+.quantityCount {
+    @include mixin.flexing(row, 0.5rem);
+
+    p {
+        width: 1rem;
         margin: auto;
+        border: 1px solid $secondary;
+
+    }
+
+    button {
+        background-color: transparent !important;
+        color: $secondary !important;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0 !important;
+        min-width: 0.6rem;
+
+        &:hover {
+            background-color: transparent !important;
+            color: $secondary !important;
+        }
     }
 }
 
-.divider{
+.divider {
     display: block;
     border: 1px solid $secondary;
     width: 80%;
     margin: 1rem;
 }
 
-.emptyCart{
-    margin: auto !important;
-}
-
-.productCheck{
+.productCheck {
     margin: 2rem 0 !important;
     @extend .flexField;
     flex-direction: column !important;
-    button{
-        a{
+
+    button {
+        :hover {
+            cursor: pointer !important;
+        }
+
+        a {
             text-decoration: none;
             color: #fff;
         }
     }
 }
 
-.flexField{
+.clearButton {
+    display: flex;
+
+    button {
+        margin: auto;
+        margin-bottom: 1rem;
+        background-color: $coffeeMedium !important;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $coffeeDark !important;
+        }
+    }
+
+}
+
+.flexField {
     @include mixin.flexing(row, 2rem);
     justify-content: space-between;
     align-items: center;
-    p{
+
+    p {
         margin: 0.5rem 0;
     }
-    button{
+
+    button {
         background-color: $primary;
         border: none;
+        border-radius: 0.3rem;
         color: #fff;
-        padding: 0.5rem ;
+        padding: 0.5rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $secondary;
+        }
     }
 }
 
-.checkout{
+.checkout {
     margin-top: 5rem;
 }
