@@ -1,6 +1,6 @@
 import style from './PageCard.module.scss'
 
-export function PageCard({ header, text, img, alt, children, customStyle, roast }) {
+export function PageCard({ header, text, img, alt, children, customStyle, roast, imgClick }) {
 
   let imageSrc;
   try {
@@ -26,7 +26,7 @@ export function PageCard({ header, text, img, alt, children, customStyle, roast 
     <div className={`${customStyle ? style.productsCard : style.cardStyling}`}>
       {header && <h2>{header}</h2>}
       {text && <p>{text}</p>}
-      {img && <img src={imageSrc} alt={alt} />}
+      {img && <img src={imageSrc} alt={alt} onClick={imgClick}/>}
       {roast && <div className={style.roastContainer}>
         <p>Roast: </p>
         {roastCircles(roast)}

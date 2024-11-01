@@ -1,3 +1,94 @@
 @use '../../styles/variables' as *;
 @use '../../styles/placeholders' as *;
 @use '../../styles/mixins' as mixin;
+
+
+.checkoutSection{
+    h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+
+.checkoutContainer{
+    padding: 1rem 3rem;
+    display: grid;
+    //Til mediaquries
+    
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.checkoutForm{
+
+    input{
+        padding: 0.5rem 0;
+    }
+}
+
+.rightContainer{
+    @include mixin.flexing(column, 1rem);
+    gap: 1rem;
+}
+
+.cartDataContainer{ //mediaquery
+    // max-height: 200px;
+    // overflow-y: auto;
+    // background-color: $cards;
+}
+
+.checkoutProducts{
+    display: grid;
+    grid-template-columns: 4fr 7fr 2fr;
+    align-items: center;
+    margin: 2rem 0;
+
+    h4, p{
+        font-weight: 400;
+        @extend %noMarPad;
+    }
+    
+}
+
+.divider {
+    display: block;
+    border: 1px solid $secondary;
+    margin: 1rem 0;
+}
+
+.checkoutShipping{
+    padding: 0 2rem 2rem;
+    h4{
+        font-weight: 400;
+        text-align: center;
+    }
+    border: 1px solid $secondary;
+    div{ //container for shippings
+        @include mixin.flexing(column, 2rem);
+        label{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.payButton{
+    display: flex;
+    justify-content: end;
+    padding: 1rem 0;
+    button{
+        padding: 1rem;
+        background-color: $secondary;
+        color: white;
+        border: none;
+        border-radius: 0.3rem;
+        width: 9rem;
+    }
+}
+
+.error{
+    color: red;
+    font-size: 0.8rem;
+    margin: 0;
+}

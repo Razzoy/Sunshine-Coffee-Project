@@ -14,17 +14,22 @@ function App() {
   return (
     <CartContextProvider>
       <BrowserRouter>
-      <Routes>
-        <Route path={'/'} element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path='products' element={<Products />} />
-          <Route path='product' element={<Product />} />
-          <Route path='checkout' element={<Checkout />} />
-          <Route path='login' element={<Login />} />
-          <Route path={'/*'} element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        <Routes>
+          <Route path={'/'} element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path='products' element={<Products />} />
+
+            <Route path='product' element={<Product />} />
+
+            <Route path='login' element={<Login />} />
+            <Route path={'/*'} element={<NoPage />} />
+
+          </Route>
+          <Route path={'checkout'} element={<MainLayout showHeader={false} />}>
+            <Route index element={<Checkout />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </CartContextProvider>
   )
 }
