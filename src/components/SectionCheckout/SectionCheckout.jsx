@@ -85,7 +85,7 @@ export function SectionCheckout() {
                             </>
                         ))}
                     </div>
-                    <p>Total: {total} DKK</p>
+                    <p className={style.totalPrice}>Total: {total} DKK</p>
                     <div className={style.checkoutShipping}>
                         <h4>Choose Shipping</h4>
                         <div>

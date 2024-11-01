@@ -6,9 +6,11 @@
     @include mixin.gridable(2, 1fr, 1rem);
     justify-content: center;
     align-items: center;
+    margin: 0 3rem;
 
     @media (min-width: 700px) {
         margin: 0 10rem 3rem;
+        
     }
 
     @media (min-width: 1100px){

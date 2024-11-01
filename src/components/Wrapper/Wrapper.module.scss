@@ -25,6 +25,19 @@
             max-width: 300px;
             margin: auto;
         }
+
+        @media (min-width: 700px) {
+
+            @include mixin.gridable(2, 1fr, 2rem);
+
+        }
+
+        @media (min-width: 1100px) {
+
+            @include mixin.gridable(3, 1fr, 2rem);
+
+
+        }
     }
 
     .singleProductContainer {
@@ -38,19 +51,20 @@
             margin: 1rem;
             text-align: start;
         }
-        button{
+
+        button {
             width: 200px;
             margin: auto;
         }
 
         @media (min-width: 700px) {
-            .productsContainer {
+            .productContainer {
                 @include mixin.gridable(2, 1fr, 2rem);
             }
         }
 
         @media (min-width: 1100px) {
-            .productsContainer {
+            .productContainer {
                 @include mixin.gridable(3, 1fr, 2rem);
             }
 
