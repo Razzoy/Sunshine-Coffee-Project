@@ -18,8 +18,10 @@ export function Cart({ onClose }) {
       <div className={style.productCheck}>
         {cartData.length === 0 ? (
           <>
-            <p>No products yet added..</p>
-            <button onClick={onClose}><Link to={'/products'}>Go to products</Link></button>
+            <div className={style.goToProducts}>
+              <p>No products yet added..</p>
+              <button onClick={onClose}><Link to={'/products'}>Go to products</Link></button>
+            </div>
           </>
         ) :
           <>
@@ -34,7 +36,7 @@ export function Cart({ onClose }) {
                         <p>{item.quantity}</p>
                         <button onClick={() => addToCart(item)}>+</button>
                       </div>
-                      <p>{item.price * item.quantity}<br></br> DKK</p>
+                      <p>{item.price * item.quantity} DKK</p>
                     </div>
                     <span className={style.divider}></span>
                   </div>
