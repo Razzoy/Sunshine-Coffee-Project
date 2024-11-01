@@ -11,7 +11,7 @@
     h2{
         @extend %licorice;
         margin: 1rem 0;
-        font-size: 5rem
+        font-size: 4rem;
     }
     p{
         @extend %inika;
@@ -19,6 +19,18 @@
     img{
         display: block;
         width: 100%;
+    }
+
+    @media (min-width: 700px) {
+        h2{
+            font-size: 5rem;
+        }
+    }
+
+    @media (min-width: 1100px) {
+        h2{
+            font-size: 5rem;
+        }
     }
 
 }
@@ -39,7 +51,8 @@
 
     img{
         height: 250px;
-        object-fit: cover
+        object-fit: cover;
+        margin: auto;
     }
 
     button{
@@ -59,6 +72,13 @@
             color: white;
         }
     }
+
+    @media (min-width: 700px) {
+
+    }
+
+    @media (min-width: 1100px) {
+    }
 }
 
 .roastContainer{
@@ -71,12 +91,24 @@
         margin: 0;
 
     }
+    @media (min-width: 700px) {
+
+    }
+
+    @media (min-width: 1100px) {
+    }
 }
 
 .circle{
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
+    @media (min-width: 700px) {
+
+    }
+
+    @media (min-width: 1100px) {
+    }
 }
 
 .filled{

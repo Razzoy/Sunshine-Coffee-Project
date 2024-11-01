@@ -8,36 +8,35 @@ export function SectionCheckout() {
     const total = cartData.reduce((acc, item) => acc + item.price * item.quantity, 0);
     const [formData, setFormData] = useState({ fName: '', lName: '', address: '', city: '', phone: '', provice: '', country: '' });
     const [errors, setErrors] = useState({});
+    const [isValidated, setIsValidated] = useState(false);
 
     const changeInput = (e) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
-        // Clear specific field error when user types
         setErrors({ ...errors, [id]: '' });
     };
 
     const validateForm = () => {
         const newErrors = {};
-
-        if (!formData.fName || formData.fName.length < 2) newErrors.fName = "First name must be at least 2 characters.";
-        if (!formData.lName || formData.lName.length < 2) newErrors.lName = "Last name must be at least 2 characters.";
-        if (!formData.phone || !/^\d+$/.test(formData.phone)) newErrors.phone = "Phone must be a number.";
-        if (!formData.address) newErrors.address = "Address is required.";
-        if (!formData.city) newErrors.city = "City is required.";
-        if (!formData.provice) newErrors.provice = "Province is required.";
-        if (!formData.country) newErrors.country = "Country is required.";
+        if (!formData.fName || formData.fName.length < 1) newErrors.fName = "First name must be at least 2 characters.";
+        if (!formData.lName || formData.lName.length < 1) newErrors.lName = "Last name must be at least 2 characters.";
+        if (!formData.phone || !/^\d+$/.test(formData.phone && formData.phone.length < 7)) newErrors.phone = "Phone must be a number.";
+        if (!formData.address || formData.address.length < 1) newErrors.address = "Address is required.";
+        if (!formData.city || formData.city.length < 1) newErrors.city = "City is required.";
+        if (!formData.provice || formData.provice.length < 1) newErrors.provice = "Province is required.";
+        if (!formData.country || formData.country.length < 1) newErrors.country = "Country is required.";
 
         setErrors(newErrors);
-
-        // Return whether the form is valid
         return Object.keys(newErrors).length === 0;
     };
 
     const payNow = (e) => {
         e.preventDefault();
         if (validateForm()) {
+            setIsValidated(true);
             console.log("Payment Successful!", formData);
         } else {
+            setIsValidated(false);
             console.log("Please correct the errors in the form.");
         }
     };
