@@ -34,6 +34,12 @@
             color: #fff;
         }
     }
+
+    div{ //"Go to product" og text i forhold til hvis der ingen produkter er
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     @media (min-width: 700px) {
         margin: 0 5rem;
         
